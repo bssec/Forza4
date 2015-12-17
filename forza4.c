@@ -19,13 +19,13 @@ int g=2,win=0;
 
 
 
-static gboolean delete_event(GtkWidget *widget, GdkEvent *event, gpointer data)
+static gboolean delete_event(GtkWidget *widget, gpointer data)
 {
 	gtk_main_quit();
 	return FALSE;
 }
 
-static void bottone(GtkWidget *widget, GdkEvent *event, gpointer data)
+static void bottone(GtkWidget *widget, gpointer data)
 {
 	int i=(int)data;
 	gtk_widget_destroy(table);
@@ -46,7 +46,7 @@ static void riavvia(void)
 	crea_finestra(8);
 }
 
-static void bottone_dialogo(GtkWidget *widget, GdkEvent *event, gchar* data)
+static void bottone_dialogo(GtkWidget *widget, gchar* data)
 {
 	if(strcmp(data,"esci")==0)
 	{
