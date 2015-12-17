@@ -6,12 +6,16 @@ to compile it, you have to install the gtk library typing in a terminal window:
 sudo apt-get install libgtk-3-dev
 ```
 
-to download the source you have to type this:
+to download and compile the source you have to type this:
 ```bash
-
+mkdir forza4
+mkdir forza4/images
+cd forza4/images
+wget http://bssec.altervista.org/images/forza4/giallo.png
+wget http://bssec.altervista.org/images/forza4/rosso.png
+wget http://bssec.altervista.org/images/forza4/vuoto.png
+cd ..
+wget https://raw.githubusercontent.com/bssec/Forza4/master/forza4.c
+gcc foza4.c $(pkg-config --cflags --libs gtk+-3.0) -o forza4
 ```
 
-and then compile the source typing it:
-```bash
-gcc "name_of_the_source" $(pkg-config --cflags --libs gtk+-3.0) -o "name_of_the_executable"
-```
