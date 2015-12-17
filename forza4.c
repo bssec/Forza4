@@ -50,7 +50,7 @@ static void bottone_dialogo(GtkWidget *widget, gchar* data)
 {
 	if(strcmp(data,"esci")==0)
 	{
-		delete_event(NULL,NULL,NULL);
+		delete_event(NULL,NULL);
 	}
 	if(strcmp(data,"rigioca")==0)
 	{
